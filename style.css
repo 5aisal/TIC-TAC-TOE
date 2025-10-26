@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+}
+body{
+    background-color: #e3c2ea;
+}
+nav ul li{
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+nav{
+    height: 8vh;
+    background-color: rgb(193, 0, 193);
+    padding: 0 15px;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+.gamecontainer{
+    height: 75vh;
+    width: 80vw;
+    background-color: #ffffff;
+    border: 3px solid black;
+    margin: 50px auto 0;
+    border-radius: 12px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,120px);
+    grid-template-rows: repeat(3,120px);
+}
+.container div{
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 45px;
+    cursor: pointer;
+}
+.tile:hover{
+    background-color: #e3c2ea;
+}
+.bl-0{
+    border-left: none !important;
+}
+.bt-0{
+    border-top:none !important;
+}
+.bb-0{
+    border-bottom: none !important;
+}
+.br-0{
+    border-right:none !important;
+}
+.game-info .name{
+    font-size: 50px;
+    font-weight: bold;
+    color:purple;
+}
+.game-info .info{
+    font-size: 30px;
+    margin: 20px;
+}
+button{
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 20px;
+    background-color: #e3c2ea;
+    border: 3px solid purple;
+    color: purple;
+    border-radius: 12px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: purple;
+    border: 3px solid black;
+    color: white;
+}
+#image{
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .gamecontainer{
+    flex-direction: column;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+}
+}
